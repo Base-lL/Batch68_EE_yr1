@@ -1,3 +1,267 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+:root {
+
+    --bg-color: #1e1e1e;
+    --main-text-color: white;
+
+    --h1-color: #348b46;
+    --h2-color: #6a994e;
+    --h3-color: #a7c957;
+    --h4-color: #acffcc;
+    --bold-color: #00eca5;
+    --italic-color: rgb(255, 56, 115);
+
+    --math-color: #f8f0d3;
+
+    /* --- 2. MAP QUARTZ SYSTEM VARS TO YOUR PALETTE --- */
+    /* This ensures the rest of the site (graph, sidebar) matches broadly */
+    --light: var(--bg-color) !important;
+    --darkgray: var(--main-text-color) !important;
+    --dark: var(--h1-color) !important; /* General header fallback */
+}
+
+p, li, blockquote {
+    white-space: pre-line;
+}
+
+
+.katex{
+    color: var(--math-color) !important;
+    fill: var(--math-color) !important; /* For SVG based math */
+}
+
+.katex-display, .mjx-display {
+    display: flex !important;     /* Use flexbox to center content */
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;       /* Ensure it spans the full width to center correctly */
+    overflow-x: auto;             /* Add scrollbar if equation is too wide */
+    overflow-y: hidden;
+}
+
+body {
+    background-color: var(--bg-color) !important;
+    color: var(--main-text-color) !important;
+}
+
+
+
+/* Headings */
+h1 { color: var(--h1-color) !important; }
+h2 { color: var(--h2-color) !important; }
+h3 { color: var(--h3-color) !important; }
+h4 { color: var(--h4-color) !important; }
+
+/* Bold Text (Markdown **text**) */
+strong, b {
+    color: var(--bold-color) !important;
+}
+
+/* Italic Text (Markdown *text*) */
+em, i {
+    color: var(--italic-color) !important;
+}
+
+.inline-title{
+    color: #00b45a;
+}
+
+
+
+.math mjx-container  {
+    color: #f8f0d3 !important;
+}
+
+.math-block {
+    color: #570000 !important;
+}
+
+
+.xtable {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: var(--ai, flex-start);
+    text-align: var(--ta, left);
+    white-space: var(--ws, normal) ;
+
+}
+
+.xtable > *{
+    padding: 0px 25px;
+
+}
+
+
+.xytable {
+    display: table;
+    width: 100%;
+}
+
+.xytable > * {
+    display: table-row;
+}
+
+.xytable > * > * {
+    display: table-cell;
+    padding: 15px 10px;
+    vertical-align: top;
+    max-width: 600px;
+    word-break: break-word;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.xytable > * ul{
+    padding: 0px 25px;
+}
+
+/*
+ *  Force Right-to-Left (RTL) direction for specific notes.
+ *  Use by adding this to your frontmatter:
+ *  cssclasses: rtl-note
+ */
+
+/* --- TARGET READING VIEW --- */
+.rtl-note .markdown-preview-view {
+    direction: rtl !important;
+    text-align: right !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Optional: Better font for Arabic */
+}
+
+/* --- TARGET EDITING VIEW (Live Preview) --- */
+/* We target the editor container to flip the whole input area */
+.rtl-note .cm-editor {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+/* --- FIX LISTS & INDENTATION (The Critical Fix) --- */
+/* 1. Reset the standard Left indent */
+.rtl-note :is(ul, ol) {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+
+    /* 2. Apply the indent to the Right side */
+    padding-right: 40px !important;
+    margin-right: 0 !important;
+}
+
+/* 3. Handle nested lists specifically so they keep stepping in */
+.rtl-note :is(ul, ol) :is(ul, ol) {
+    padding-right: 40px !important; /* Ensure nested items step in further */
+}
+
+/* 4. Fix Checkboxes (Task lists) spacing */
+.rtl-note .task-list-item-checkbox {
+    margin-left: 8px !important; /* Push text away from box (left side of text) */
+    margin-right: 0 !important;
+}
+
+/* --- FIX HEADERS --- */
+.rtl-note h1, .rtl-note h2, .rtl-note h3, .rtl-note h4, .rtl-note h5, .rtl-note h6 {
+    text-align: right !important;
+}
+
+.fc-col-header-cell {
+    color: #ff9900 !important; /* A nice orange color */
+    font-size: 0.9em !important;
+}
+
+
+.fc-event {
+    background-color: #5c3c92 !important; /* A deep purple */
+    border-color: #5c3c92 !important;
+    color: white !important; /* This changes the event's text color */
+}
+
+
+.fc-event[exam] {
+    background-color: #990000 !important; /* A strong red background */
+    border-color: #660000 !important;     /* A darker red border */
+    color: white !important;              /* White text */
+}
+
+/* Make event titles a bit bolder */
+.fc-event-title {
+    font-weight: bold !important;
+}
+
+
+
+@media print {
+
+
+
+    @page {
+        margin-top: 12px !important;
+        margin-bottom: 12px !important;
+        background-color: #1e1e1e !important;
+        @top-left { content: ""; }
+        @top-center { content: ""; }
+        @top-right { content: ""; }
+        @bottom-left { content: ""; }
+        @bottom-center { content: ""; }
+        @bottom-right { content: ""; }
+    }
+
+
+    html, body {
+
+        /*background-image: linear-gradient(to Left, #194061, #14212a) !important;*/
+        background-color: #1e1e1e !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;// put your custom CSS here!
+
+        /* Ensure it fills the whole page */
+        height: 100%;
+        width: 100%;
+        zoom: 115%;
+    }
+
+    .markdown-reading-view,
+    .markdown-preview-view,
+    .markdown-reading-view p, /* Be even more specific for paragraphs */
+    .markdown-preview-view p {
+        color: aliceblue !important; /* <-- CHANGE YOUR TEXT COLOR HERE (e.g., #FFFFFF for white) */
+    }
+
+
+    .xtable {
+
+        display: flex!important;
+        flex-direction: row!important;
+        align-items: var(--ai, flex-start)!important;
+        text-align: var(--ta, left)!important;
+        white-space: var(--ws, normal)!important;
+
+    }
+
+    .xytable {
+        display: table !important; /* Force table display */
+        width: 100%;
+    }
+
+    .xytable > * {
+        display: table-row !important; /* Force table-row display */
+    }
+
+    .xytable > * > * {
+        display: table-cell !important; /* Force table-cell display */
+        /* Break-inside is important for pages */
+        break-inside: avoid;
+    }
+
+    .xytable img {
+        max-width: 100% !important;
+        height: auto;
+        break-inside: avoid;
+    }
+
+
+
+}
+
+
