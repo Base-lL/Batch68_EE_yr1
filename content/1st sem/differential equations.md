@@ -46,7 +46,7 @@ $$
 y = y ^{(0)} \quad,\quad y' = \frac{dy}{dx} \quad,\quad y'' = \frac{d^2y}{dx^2} \quad,\quad \cdots \quad,\quad y ^{(n)} = \frac{d^ny}{dx^n}
 $$
 
-### معادلة تفاضلية جزئية (partial differential equation PDE):#
+### معادلة تفاضلية جزئية (partial differential equation PDE):
 تكون دالة في اكثر من متغير:   $z = f(x,y)$
 وjكون المشتقات: 
 

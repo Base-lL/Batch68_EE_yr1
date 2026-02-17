@@ -18,5 +18,5 @@ GitHub repository: https://github.com/Base-lL/Batch68_EE_yr1
 
 
 $$
-u = k(y) \quad,\quad \dfrac{du}{dx} = k'(y) = h(y) \dfrac{dy}{dx}
+
 $$

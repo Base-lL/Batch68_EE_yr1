@@ -28,17 +28,17 @@ export const defaultContentPageLayout: PageLayout = {
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    Component.DesktopOnly(Component.Graph()),
-    /*Component.Flex({
+    //Component.DesktopOnly(Component.Graph()),
+    Component.Flex({
       components: [
         {
           Component: Component.Search(),
           grow: true,
         },
-        //{ Component: Component.Darkmode() },
+        { Component: Component.Darkmode() },
         { Component: Component.ReaderMode() },
       ],
-    }),*/
+    }),
     Component.Explorer(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
