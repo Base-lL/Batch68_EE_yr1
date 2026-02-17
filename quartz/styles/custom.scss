@@ -2,33 +2,46 @@
 
 :root {
 
-    --bg-color: #1e1e1e;
-    --main-text-color: white;
+    /*
+    light: page background
+    lightgray: borders
+    gray: graph links, heavier borders
+    darkgray: body text
+    dark: header text and icons
+    secondary: link colour, current graph node
+    tertiary: hover states and visited graph nodes
+    highlight: internal link background, highlighted text, highlighted lines of code
+    textHighlight: markdown highlighted text background
+    */
 
-    --h1-color: #348b46;
-    --h2-color: #6a994e;
-    --h3-color: #a7c957;
-    --h4-color: #acffcc;
+
+
+    --bg-color: #0c0e18;
+    --main-text-color: white;
+    --h1-color: #4b36e7;
+    --h2-color: #980df5;
+    --h3-color: #cc00d9;
+    --h4-color: #c491ff;
+    --h5-color: #edc0ff;
+    --h6-color: white;
+    
     --bold-color: #00eca5;
     --italic-color: rgb(255, 56, 115);
-
     --math-color: #f8f0d3;
+    --file-color: #00fff7;
 
-    /* --- 2. MAP QUARTZ SYSTEM VARS TO YOUR PALETTE --- */
-    /* This ensures the rest of the site (graph, sidebar) matches broadly */
     --light: var(--bg-color) !important;
     --darkgray: var(--main-text-color) !important;
-    --dark: var(--h1-color) !important; /* General header fallback */
+    --dark: var(--file-color) !important; /* General header fallback */
 }
 
-p, li, blockquote {
+p, blockquote {
     white-space: pre-line;
 }
 
 
 .katex{
     color: var(--math-color) !important;
-    fill: var(--math-color) !important; /* For SVG based math */
 }
 
 .katex-display, .mjx-display {
@@ -45,15 +58,15 @@ body {
     color: var(--main-text-color) !important;
 }
 
-
-
 /* Headings */
 h1 { color: var(--h1-color) !important; }
 h2 { color: var(--h2-color) !important; }
 h3 { color: var(--h3-color) !important; }
 h4 { color: var(--h4-color) !important; }
+h5 { color: var(--h5-color) !important; }
+h6 { color: var(--h6-color) !important; }
 
-/* Bold Text (Markdown **text**) */
+/* bold */
 strong, b {
     color: var(--bold-color) !important;
 }
@@ -63,19 +76,7 @@ em, i {
     color: var(--italic-color) !important;
 }
 
-.inline-title{
-    color: #00b45a;
-}
-
-
-
-.math mjx-container  {
-    color: #f8f0d3 !important;
-}
-
-.math-block {
-    color: #570000 !important;
-}
+.content-meta { color: #00fff7;}
 
 
 .xtable {
@@ -164,104 +165,3 @@ em, i {
 .rtl-note h1, .rtl-note h2, .rtl-note h3, .rtl-note h4, .rtl-note h5, .rtl-note h6 {
     text-align: right !important;
 }
-
-.fc-col-header-cell {
-    color: #ff9900 !important; /* A nice orange color */
-    font-size: 0.9em !important;
-}
-
-
-.fc-event {
-    background-color: #5c3c92 !important; /* A deep purple */
-    border-color: #5c3c92 !important;
-    color: white !important; /* This changes the event's text color */
-}
-
-
-.fc-event[exam] {
-    background-color: #990000 !important; /* A strong red background */
-    border-color: #660000 !important;     /* A darker red border */
-    color: white !important;              /* White text */
-}
-
-/* Make event titles a bit bolder */
-.fc-event-title {
-    font-weight: bold !important;
-}
-
-
-
-@media print {
-
-
-
-    @page {
-        margin-top: 12px !important;
-        margin-bottom: 12px !important;
-        background-color: #1e1e1e !important;
-        @top-left { content: ""; }
-        @top-center { content: ""; }
-        @top-right { content: ""; }
-        @bottom-left { content: ""; }
-        @bottom-center { content: ""; }
-        @bottom-right { content: ""; }
-    }
-
-
-    html, body {
-
-        /*background-image: linear-gradient(to Left, #194061, #14212a) !important;*/
-        background-color: #1e1e1e !important;
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;// put your custom CSS here!
-
-        /* Ensure it fills the whole page */
-        height: 100%;
-        width: 100%;
-        zoom: 115%;
-    }
-
-    .markdown-reading-view,
-    .markdown-preview-view,
-    .markdown-reading-view p, /* Be even more specific for paragraphs */
-    .markdown-preview-view p {
-        color: aliceblue !important; /* <-- CHANGE YOUR TEXT COLOR HERE (e.g., #FFFFFF for white) */
-    }
-
-
-    .xtable {
-
-        display: flex!important;
-        flex-direction: row!important;
-        align-items: var(--ai, flex-start)!important;
-        text-align: var(--ta, left)!important;
-        white-space: var(--ws, normal)!important;
-
-    }
-
-    .xytable {
-        display: table !important; /* Force table display */
-        width: 100%;
-    }
-
-    .xytable > * {
-        display: table-row !important; /* Force table-row display */
-    }
-
-    .xytable > * > * {
-        display: table-cell !important; /* Force table-cell display */
-        /* Break-inside is important for pages */
-        break-inside: avoid;
-    }
-
-    .xytable img {
-        max-width: 100% !important;
-        height: auto;
-        break-inside: avoid;
-    }
-
-
-
-}
-
-

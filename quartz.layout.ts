@@ -22,29 +22,30 @@ export const defaultContentPageLayout: PageLayout = {
       condition: (page) => page.fileData.slug !== "index",
     }),
     Component.ArticleTitle(),
-    Component.ContentMeta(),
-    Component.TagList(),
+    //Component.ContentMeta(),
+    //Component.TagList(),
   ],
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
+    Component.DesktopOnly(Component.Graph()),
+    /*Component.Flex({
       components: [
         {
           Component: Component.Search(),
           grow: true,
         },
-        { Component: Component.Darkmode() },
+        //{ Component: Component.Darkmode() },
         { Component: Component.ReaderMode() },
       ],
-    }),
+    }),*/
     Component.Explorer(),
-  ],
-  right: [
-    Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
+  right: [
+    Component.MobileOnly(Component.Graph()),
+  ], 
 }
 
 // components for pages that display lists of pages  (e.g. tags or folders)

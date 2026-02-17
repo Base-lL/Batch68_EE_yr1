@@ -1,59 +1,22 @@
 ---
-title: Welcome to Quartz
+title: السلام عليكم ورحمة الله وبركاته
 ---
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+إن شاء الله ده هيكون مكان مجمع للملفات و تلخبصات و أي شيء تاني اظن أنه مهم وممكن ينفع الناس
+الأصل في الموضوع ان الملفات هي نوتات (notes) بعملها بإستخدام [obsidian](https://obsidian.md/) وبحولها لموقع static html بإستخدام [quartz](https://quartz.jzhao.xyz/) وبرفعها على النت بـ GitHub
+فيديو فيه الطريقة: https://youtu.be/zGFroBGud7w?si=rNb-_gNxEBXEwI2g
+GitHub repository: https://github.com/Base-lL/Batch68_EE_yr1
 
 
+أي حد حابب يساهم أو يقترح حاجة يقدر يتواصل معايا
 
-**bold**
-*italic*
-<center>centered</center>
-<center><b>bold centered</b></center>
+مش تلخيصات من chatbot او اي ai عامةً. هو صحيح بيساهم بس أنا مش باخد الكلام copy paste على طول, براجعه الأول 
 
+المحتوي هيبقي بالانجليزي إلا لو المادة نفسها بناخدها بالعربي (إللي كانت دايما الرياضة بس) ومش هيبقي فيه ترجمة للعربي, ده اسهلي عشان باخد من المصدر على طول من غير ترجمة
 
-
-# h1
+تحيا مصر
 
 
-## h2
-
-
-### not h3
-
-
-#### h4
-
-
-
-
-
-<div class="xtable" style="--text-align: center;">
-	<div><b>scalar</b>
-		A quantity that can be described <i>only</i> by its magnitude
-	</div>
-	<div> <strong>vector</strong> 
-		A quantity described by its magnitude <i>and</i> direction
-	</div>
-</div>
-
-
-$single$
-
-
-
-
-
-
-
-
-
-
-
-used in a $line$
 
 $$
-\arctan \theta = \tan^{-1} \theta
+u = k(y) \quad,\quad \dfrac{du}{dx} = k'(y) = h(y) \dfrac{dy}{dx}
 $$
-
-I FUCKING LOVE OPEN SOURCE
