@@ -1,3 +1,4 @@
+#1stSem #mathmatics #projects
 <div class="xtable center"  style = "--ta : left; --ws: normal; --ai: center" >
 	<div><h1>CIRCUIT DEFINETION</h1> 
 		The circuit represents a simplified model of real electrical systems such as filters and control systems, where multiple paths and energy storage elements affect system behavior.
@@ -32,11 +33,13 @@
 - voltage across the capacitor:  $\large V_C = \dfrac{Q}{C}$ 
 
 - remember that the current $I = \dfrac{dq}{dt}$
+
 ## the equation can be divided into:
 
 ### RLC PART:
 
-$$\large\begin{array}{l}
+$$
+\large\begin{array}{l}
  V_R + V_L  + V_C = E\\
  I_1R + \dfrac{dI_1}{dt}L + \dfrac{Q}{C} = V_\text{max}\sin\omega t\\
 \dfrac{dQ_1}{dt}R + \dfrac{d^2Q_1}{dt^2} L + \dfrac{Q}{C} = V_\text{max}\sin\omega t \\\\
@@ -44,9 +47,13 @@ $$\large\begin{array}{l}
 \therefore 2\dfrac{dQ_1}{dt} + \dfrac{d^2Q_1}{dt^2} + 4Q = 10\sin4 t \\
 \color{#acffcc}\text{Let}\dfrac{d}{dt} = D \rightarrow \color{#f7ecc2}
 (D^2+2D+4)Q = 10\sin4 t\\\\
-\end{array}$$
+\end{array}
+$$
+
 #### solving for $Q_c$:
-$$\large\begin{array}{c}
+
+$$
+\large\begin{array}{c}
 (D^2 + 2D + 4)Q = 0\\
 \text{Let } Q=e^{mt} \quad\rightarrow\quad DQ=me^{mt} \quad\rightarrow\quad D^2Q=m^2e^{mt}\\\\
 m^2e^{mt} + 2me^{mt} + 4e^{mt} = 0 \quad\rightarrow\quad m^2 + 2m + 4 =0\\\\
@@ -57,9 +64,13 @@ m^2e^{mt} + 2me^{mt} + 4e^{mt} = 0 \quad\rightarrow\quad m^2 + 2m + 4 =0\\\\
     Q_c = e^{\alpha t}(k_1 \sin \beta t + k_2 \cos \beta t) & \color{#acffcc}\text{Where $k_1$ and $k_2$ are constants} \\[1em]
     Q_c = e^{-t}(k_1 \sin \sqrt{3} t + k_2 \cos \sqrt{3} t) & \color{#acffcc}\text{Final Result \#}
 \end{array}
-\end{array}$$
+\end{array}
+$$
+
 #### solving for $Q_p$:
-$$\large\begin{array}{c}
+
+$$
+\large\begin{array}{c}
 Q_p = \dfrac{10}{D^2 + 2D + 4} \{ \sin(4t) \}\\\\
 \text{For} \sin(at),\; D^2 = -a^2 \quad,\quad a=4 \quad,\quad D^2 = -(4^2) = -16 \\\\
 \begin{array}{l  l}
@@ -73,11 +84,14 @@ Q_p = \dfrac{10}{D^2 + 2D + 4} \{ \sin(4t) \}\\\\
     Q_p = -\dfrac{5}{52} [ 4 \cos 4t + 6 \sin 4t ] & \color{#acffcc}\text{Compute Derivative} \\[1em]
     Q_p = -\dfrac{5}{13} \cos(4t) - \frac{15}{26} \sin(4t) & \color{#acffcc}\text{Final Result \#}
 \end{array}
-\end{array}$$
+\end{array}
+$$
+
 #### solving for $Q_1(t)$ and  $I_1(t)$  :
 
 
-$$\large\begin{array}{l}
+$$
+\large\begin{array}{l}
 Q_1(t) = Q_c + Q_p = e^{-t}(k_1 \sin \sqrt{3} t + k_2 \cos \sqrt{3} t) +\left(-\dfrac{5}{13} \cos(4t) - \frac{15}{26} \sin(4t)\right)\\
 \begin{align}
 I_1(t) &= \dfrac{dQ_1}{dt}\\\\
@@ -90,29 +104,38 @@ I_!(0) = -k_2+\sqrt3 - \dfrac{30}{13} = 0 &\quad\rightarrow\quad& k_1 = \dfrac{3
 \end{array}\\\\
 Q_1(t) = e^{-t}\left(\dfrac{35\sqrt{3}}{39} \sin \sqrt{3} t + \dfrac{5}{13} \cos \sqrt{3} t\right) - \dfrac{5}{13} \cos(4t) - \frac{15}{26} \sin(4t) \\\\
 I_1(t) = e^{-t}\left[-\dfrac{50\sqrt{3}}{39} \sin \sqrt{3} t + \dfrac{30}{13} \cos \sqrt{3} t\right] + \dfrac{20}{13} \sin(4t) - \frac{30}{13} \cos(4t)
+\end{array}
+$$
 
 
-
-\end{array}$$
 ### RL PART:
-$$\large\begin{array}{l}
+
+$$
+\large\begin{array}{l}
  V_L + V_R = V_\text{max}\sin\omega\\
 \dfrac{dI_2}{dt}L + \large I_2R = V_\text{max}\sin\omega t\\\\
 \because R = 4 \quad,\quad L = 2 \quad,\quad V_\text{max}=10 \quad,\quad \omega=4\\\\
 \therefore 2\dfrac{dI_2}{dt} + 4\large I_2 = 10\sin4 t\\
 =\dfrac{dI_2}{dt} + 2\large I_2 = 5\sin4 t
+\end{array}
+$$
 
-\end{array}$$
 #### this is a linear differential equations of the first order of the form $\dfrac{dy}{dx}+f(x)y = g(x)$
 #### by taking the integration factor $\micro(x)$ :
-$$\large\begin{align}
+
+$$
+\large\begin{align}
 \micro(x) 
 &= e^{\int f(t)dt}\\
 &= e^{\int2dt}\\
 &= e^{2t}
-\end{align}$$
+\end{align}
+$$
+
 #### and from the integration factor: 
-$$\large\begin{array}{l}
+
+$$
+\large\begin{array}{l}
 \begin{align}
 I_2 &= \dfrac{1}{\micro} \int \micro g(t)dt\\
 &= \dfrac{1}{e^{2t}} \int 2e^{2t} \cdot5\sin4t \,dt\\
@@ -122,11 +145,11 @@ I_2 &= \dfrac{1}{\micro} \int \micro g(t)dt\\
 \because\text{at } t = 0 \quad,\quad I_2 = 0\\
 \therefore 0 = \dfrac12\left( 0-2 \right) + C \quad,\quad C = 1\\\\
 I_2 = \dfrac12 \sin4t - \cos4t + e^{-2t}
-
 \end{array}
-
 $$
+
 ## total current equation:
+
 $$
 \large\begin{align}
 I(t) & = I_1 + I_2\\

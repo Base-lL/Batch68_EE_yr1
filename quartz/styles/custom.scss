@@ -16,13 +16,13 @@
 
 
 
-    --bg-color: #0c0e18;
+    --background-primary: #0c0e18;
     --main-text-color: white;
-    --h1-color: #4b36e7;
-    --h2-color: #980df5;
-    --h3-color: #cc00d9;
-    --h4-color: #c491ff;
-    --h5-color: #edc0ff;
+    --h1-color: #348b46;
+    --h2-color: #6a994e;
+    --h3-color: #a7c957;
+    --h4-color: #acffcc;
+    --h5-color: #c0ffff;
     --h6-color: white;
     
     --bold-color: #00eca5;
@@ -30,41 +30,31 @@
     --math-color: #f8f0d3;
     --file-color: #00fff7;
 
-    --light: var(--bg-color) !important;
-    --darkgray: var(--main-text-color) !important;
-    --dark: var(--file-color) !important; /* General header fallback */
+    --light: var(--background-primary) ;
+    --darkgray: var(--main-text-color) ;
+    --dark: var(--file-color) !important;
+    //--secondary: var(--file-color) !important;
 }
 
 p, blockquote {
-    white-space: pre-line;
+    white-space: pre-line !important;
 }
 
 
-.katex{
-    color: var(--math-color) !important;
-}
 
-.katex-display, .mjx-display {
-    display: flex !important;     /* Use flexbox to center content */
-    justify-content: center !important;
-    text-align: center !important;
-    width: 100% !important;       /* Ensure it spans the full width to center correctly */
-    overflow-x: auto;             /* Add scrollbar if equation is too wide */
-    overflow-y: hidden;
-}
 
 body {
-    background-color: var(--bg-color) !important;
-    color: var(--main-text-color) !important;
+    background-color: var(--background-primary) ;
+    color: var(--main-text-color) ;
 }
 
 /* Headings */
-h1 { color: var(--h1-color) !important; }
-h2 { color: var(--h2-color) !important; }
-h3 { color: var(--h3-color) !important; }
-h4 { color: var(--h4-color) !important; }
-h5 { color: var(--h5-color) !important; }
-h6 { color: var(--h6-color) !important; }
+h1 { color: var(--h1-color)!important; }
+h2 { color: var(--h2-color)!important; }
+h3 { color: var(--h3-color)!important; }
+h4 { color: var(--h4-color)!important; }
+h5 { color: var(--h5-color)!important; }
+h6 { color: var(--h6-color)!important; }
 
 /* bold */
 strong, b {
@@ -127,10 +117,11 @@ em, i {
 
 /* --- TARGET READING VIEW --- */
 .rtl-note {
-    direction: rtl !important;
-    text-align: right !important;
+    direction: rtl;
+    text-align: right;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Optional: Better font for Arabic */
 }
+
 
 /* --- TARGET EDITING VIEW (Live Preview) --- */
 /* We target the editor container to flip the whole input area */
@@ -141,26 +132,42 @@ em, i {
 
 
 .rtl-note :is(ul, ol) {
-    padding-left: 0 !important;
-    margin-left: 0 !important;
+    padding-left: 0 ;
+    margin-left: 0 ;
 
     /* 2. Apply the indent to the Right side */
-    padding-right: 40px !important;
-    margin-right: 0 !important;
+    padding-right: 40px ;
+    margin-right: 0 ;
 }
 
 /* 3. Handle nested lists specifically so they keep stepping in */
 .rtl-note :is(ul, ol) :is(ul, ol) {
-    padding-right: 40px !important; /* Ensure nested items step in further */
+    padding-right: 40px ; /* Ensure nested items step in further */
 }
 
 /* 4. Fix Checkboxes (Task lists) spacing */
 .rtl-note .task-list-item-checkbox {
-    margin-left: 8px !important; /* Push text away from box (left side of text) */
-    margin-right: 0 !important;
+    margin-left: 8px ; /* Push text away from box (left side of text) */
+    margin-right: 0 ;
 }
 
 
 .rtl-note h1, .rtl-note h2, .rtl-note h3, .rtl-note h4, .rtl-note h5, .rtl-note h6 {
-    text-align: right !important;
+    text-align: right ;
+}
+
+
+.katex{
+    direction: ltr;
+    color: var(--math-color) ;
+}
+
+.katex-display, .mjx-display {
+    direction: ltr;
+    display: flex ;     /* Use flexbox to center content */
+    justify-content: center ;
+    text-align: center ;
+    width: 100% ;       /* Ensure it spans the full width to center correctly */
+    overflow-x: auto;             /* Add scrollbar if equation is too wide */
+    overflow-y: hidden;
 }

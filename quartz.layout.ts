@@ -23,28 +23,27 @@ export const defaultContentPageLayout: PageLayout = {
     }),
     Component.ArticleTitle(),
     //Component.ContentMeta(),
-    //Component.TagList(),
+    Component.TagList(),
   ],
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    //Component.DesktopOnly(Component.Graph()),
     Component.Flex({
       components: [
         {
           Component: Component.Search(),
           grow: true,
         },
-        { Component: Component.Darkmode() },
+        //{ Component: Component.Darkmode() },
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
-    Component.DesktopOnly(Component.TableOfContents()),
-    Component.Backlinks(),
+    Component.Explorer() 
+
   ],
   right: [
-    Component.MobileOnly(Component.Graph()),
+    Component.Graph(),
+    Component.DesktopOnly(Component.TableOfContents()),
   ], 
 }
 

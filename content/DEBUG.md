@@ -1,12 +1,17 @@
 متشغلش بالك بالملف ده
 
-
 **bold**
 *italic*
 <center>centered</center>
 <center><b>bold</b> centered</center>
 
 
+> [!note] creab
+> Electric current $I$ flowing through a cylindrical conductor with cross-sectional area $S$ (or $A$).
+
+
+![[sine.png]]
+text that is right *under* an **image** 
 
 # h1
 ## h2
@@ -28,12 +33,12 @@ this is between 2 lines
 - *list*
 
 1. this
-2. one
-3. is 
-4. **numbered**
+2. is
+3. a
+4. **numbered** list
 
 - [x] checklist
-- [ ] why not
+- [ ] uncheck
 
 [^1]
 
