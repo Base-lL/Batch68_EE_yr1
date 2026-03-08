@@ -9,8 +9,8 @@
 > [!note] creab
 > Electric current $I$ flowing through a cylindrical conductor with cross-sectional area $S$ (or $A$).
 
-
 ![[sine.png]]
+
 text that is right *under* an **image** 
 
 # h1
