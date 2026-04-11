@@ -11,7 +11,8 @@
 
 ![[sine.png]]
 
-text that is right *under* an **image** 
+text that is right *under* an **image** by one line break 
+
 
 # h1
 ## h2
@@ -38,7 +39,7 @@ this is between 2 lines
 4. **numbered** list
 
 - [x] checklist
-- [ ] uncheck
+- [ ] unchecked
 
 [^1]
 

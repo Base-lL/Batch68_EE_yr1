@@ -1,4 +1,4 @@
-
+*to be continued*
 
 $$
 \begin{array}{c | l}
@@ -28,3 +28,5 @@ $$
    \displaystyle-\frac{1}{a} \text{cosech}^{-1}\left(\frac{f(x)}{a}\right) + C 
 \end{array}
 $$
+
+

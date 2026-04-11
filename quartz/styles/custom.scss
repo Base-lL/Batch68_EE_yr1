@@ -4,6 +4,7 @@
 
     /*
     light: page background
+    
     lightgray: borders
     gray: graph links, heavier borders
     darkgray: body text
@@ -13,11 +14,11 @@
     highlight: internal link background, highlighted text, highlighted lines of code
     textHighlight: markdown highlighted text background
     */
+    --light: #0c0e18 !important;
+    --darkgray: white !important;
+    --dark: #00fff7 !important;
 
 
-
-    --background-primary: #0c0e18;
-    --main-text-color: white;
     --h1-color: #348b46;
     --h2-color: #6a994e;
     --h3-color: #a7c957;
@@ -26,13 +27,10 @@
     --h6-color: white;
     
     --bold-color: #00eca5;
-    --italic-color: rgb(255, 56, 115);
+    --italic-color: #ff3873;
     --math-color: #f8f0d3;
-    --file-color: #00fff7;
 
-    --light: var(--background-primary) ;
-    --darkgray: var(--main-text-color) ;
-    --dark: var(--file-color) !important;
+
     //--secondary: var(--file-color) !important;
 }
 
@@ -41,12 +39,6 @@ p, blockquote {
 }
 
 
-
-
-body {
-    background-color: var(--background-primary) ;
-    color: var(--main-text-color) ;
-}
 
 /* Headings */
 h1 { color: var(--h1-color)!important; }

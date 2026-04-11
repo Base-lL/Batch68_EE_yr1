@@ -1,10 +1,10 @@
 #1stSem #mathmatics #projects
-<div class="xtable center"  style = "--ta : left; --ws: normal; --ai: center" >
+<div class="xtable"  style = "--ta : left; --ws: normal; --ai: center" >
 	<div><h1>CIRCUIT DEFINETION</h1> 
 		The circuit represents a simplified model of real electrical systems such as filters and control systems, where multiple paths and energy storage elements affect system behavior.
 		<h2>The objective of this circuit</h2> 
 		 <h3>1. study differential equations of different degrees</h3>
-		<div class="xtable center"  style = "--ta : center; --ws: normal" >
+		<div class="xtable"  style = "--ta : center; --ws: normal" >
 			<div>
 				<h4>RL circuit</h4>
 				differential equations of the 1st degree
