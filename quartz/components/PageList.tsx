@@ -6,6 +6,9 @@ import { GlobalConfiguration } from "../cfg"
 
 export type SortFn = (f1: QuartzPluginData, f2: QuartzPluginData) => number
 
+/*
+ the orginal functiong prioritized sorting by dates, i replaced it with one that prioritizes alphabetical sorting
+
 export function byDateAndAlphabetical(cfg: GlobalConfiguration): SortFn {
   return (f1, f2) => {
     // Sort by date/alphabetical
@@ -25,6 +28,18 @@ export function byDateAndAlphabetical(cfg: GlobalConfiguration): SortFn {
     return f1Title.localeCompare(f2Title)
   }
 }
+*/
+
+export function byDateAndAlphabetical(cfg: GlobalConfiguration): SortFn {
+  return (f1, f2) => {
+    // Force sort alphabetically by title, ignoring dates entirely.
+    // { numeric: true } ensures "2" comes before "10".
+    const f1Title = f1.frontmatter?.title.toLowerCase() ?? f1.slug ?? ""
+    const f2Title = f2.frontmatter?.title.toLowerCase() ?? f2.slug ?? ""
+
+    return f1Title.localeCompare(f2Title, undefined, { numeric: true })
+  }
+}
 
 export function byDateAndAlphabeticalFolderFirst(cfg: GlobalConfiguration): SortFn {
   return (f1, f2) => {
@@ -34,6 +49,9 @@ export function byDateAndAlphabeticalFolderFirst(cfg: GlobalConfiguration): Sort
     if (f1IsFolder && !f2IsFolder) return -1
     if (!f1IsFolder && f2IsFolder) return 1
 
+      /*
+       * commented too ro remove the date sorting
+       *
     // If both are folders or both are files, sort by date/alphabetical
     if (f1.dates && f2.dates) {
       // sort descending
@@ -44,6 +62,7 @@ export function byDateAndAlphabeticalFolderFirst(cfg: GlobalConfiguration): Sort
     } else if (!f1.dates && f2.dates) {
       return 1
     }
+    */
 
     // otherwise, sort lexographically by title
     const f1Title = f1.frontmatter?.title.toLowerCase() ?? ""
