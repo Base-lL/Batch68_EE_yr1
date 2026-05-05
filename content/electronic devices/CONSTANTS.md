@@ -1,7 +1,5 @@
 ---
 tags:
-  - ElectronicDevices
-  - 2ndSem
 ---
 
 $$
